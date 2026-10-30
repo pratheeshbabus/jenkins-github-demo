@@ -20,7 +20,7 @@ jobs:
       - name: Display confirmation message
         run: echo "Repository checkout completed successfully!"
 
-              - name: Validate Dockerfile
+      - name: Validate Dockerfile
         run: |
           if [ -f Dockerfile ]; then
             echo "Dockerfile exists!"
