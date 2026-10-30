@@ -1,3 +1,4 @@
+
 name: My First GitHub Actions Workflow
 
 on:
@@ -10,8 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Display a welcome message
-        run: echo "Hello from GitHub Actions!"
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Display current date
-        run: date
+      - name: Display repository files
+        run: ls -la
+
+      - name: Display confirmation message
+        run: echo "Repository checkout completed successfully!"
